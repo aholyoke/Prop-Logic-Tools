@@ -1,0 +1,7 @@
+^ Conjunction
+| Disjunction
+~ Negation
+-> Conditional
+<-> Biconditional
+() Parenthesis
+a-z, A-Z Variables
