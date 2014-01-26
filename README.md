@@ -7,28 +7,35 @@ The interpreter is incomplete so if you want to try it out, I recommend loading 
 eg.
 
 Prelude> :l Main.hs
+
 Main> makeTable "a|~b^c"
-a    b    c    a|(~b^c)
-T    T    T    T
-T    T    F    T
-T    F    T    T
-T    F    F    T
-F    T    T    F
-F    T    F    F
-F    F    T    T
-F    F    F    F
+
+	a    b    c    a|(~b^c)
+	T    T    T    T
+	T    T    F    T
+	T    F    T    T
+	T    F    F    T
+	F    T    T    F
+	F    T    F    F
+	F    F    T    T
+	F    F    F    F
+
 Main> conjunctiveNormalForm (p "a|~b^c")
+
 (a|~b)^(a|c)
+
 Main> makeTable "(a|~b)^(a|c)"
-a    b    c    (a|~b)^(a|c)
-T    T    T    T
-T    T    F    T
-T    F    T    T
-T    F    F    T
-F    T    T    F 
-F    T    F    F 
-F    F    T    T
-F    F    F    F
+
+	a    b    c    (a|~b)^(a|c)
+	T    T    T    T
+	T    T    F    T
+	T    F    T    T
+	T    F    F    T
+	F    T    T    F 
+	F    T    F    F 
+	F    F    T    T
+	F    F    F    F
+
 
 In the example above, the function p is a utility function used to parse the string with no error-handling so that it can be passed directly to the algorithms.
 The function makeTable does this already so it should not be used there.
